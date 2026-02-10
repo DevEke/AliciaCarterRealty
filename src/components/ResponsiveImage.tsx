@@ -14,9 +14,8 @@ export default function ResponsiveImage({
         src={src}
         alt={alt}
         fill
-        sizes="100vh"
+        sizes="100vw"
         style={{ objectFit: "contain" }} // or "cover"
-        priority
       />
     </div>
   );

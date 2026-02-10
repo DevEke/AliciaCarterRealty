@@ -105,6 +105,21 @@
     text-decoration: underline;
   }
 
+  .texasNotices {
+    padding-block: var(--s-5);
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: var(--s-7)
+  }
+
+  .texasNoticesList {
+    list-style-type: none;
+    li {
+      margin-block: var(--s-4);
+    }
+  }
+
   @media (max-width: 768px) {
     .footer {
         padding: var(--s-9) var(--s-6);
@@ -152,5 +167,17 @@
     .footerBottomNav {
         flex-direction: column;
         padding-block: var(--s-7);
+    }
+
+    .texasNotices {
+      flex-direction: column;
+    }
+
+    .texasNoticesList {
+      text-align: center;
+    }
+
+    .footerRight {
+      width: 100%;
     }
   }

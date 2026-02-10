@@ -218,6 +218,29 @@ main {
   padding: var(--s-5);
 }
 
+.privacyContainer {
+  border-bottom: 1px solid var(--border);
+  padding-block: var(--s-5);
+
+  h1 {
+    font-size: var(--s-7);
+  }
+
+  h2 {
+    font-size: var(--s-6);
+  }
+
+  .basicList {
+    margin-left: var(--s-7);
+    padding-block: var(--s-2);
+    font-size: 18px;
+
+    li {
+      margin-block: var(--s-2);
+    }
+  }
+}
+
 .bold {
   font-weight: 600;
 }

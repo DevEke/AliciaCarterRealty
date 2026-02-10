@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Reveal } from "@/components/Reveal/Reveal";
 import styles from "./page.module.css";
 import team from "../../content/team.json";
 import { TbPhone, TbAt } from "react-icons/tb";
@@ -24,12 +25,14 @@ export default function AboutPage() {
             <section className="section">
             <div className="container heroContainer">
               <div className="heroContent contentPad">
-                  <h1>About <span className="brand">Alicia Carter Realty</span></h1>
-                  <p className="subHeading">Alicia Carter Realty is a boutique real estate agency focused on guiding clients through buying, selling, and homeownership decisions with care and clarity. With more than two decades of experience, our work is grounded in strong relationships, community involvement, and a commitment to providing thoughtful, personalized support at every stage of the process.</p>
-                  <div className="centeredContent">
-              <p className="brand bold spacer">Our approach is shaped by professionalism, honesty, integrity, dedication, and respect—values that guide how we work and how we serve our clients.</p>
-                  <small className="muted">Established in 1999.</small>
-              </div>
+                <Reveal>
+                    <h1>About <span className="brand">Alicia Carter Realty</span></h1>
+                    <p className="subHeading">Alicia Carter Realty is a boutique real estate agency focused on guiding clients through buying, selling, and homeownership decisions with care and clarity. With more than two decades of experience, our work is grounded in strong relationships, community involvement, and a commitment to providing thoughtful, personalized support at every stage of the process.</p>
+                    <div className="centeredContent">
+                    <p className="brand bold spacer">Our approach is shaped by professionalism, honesty, integrity, dedication, and respect—values that guide how we work and how we serve our clients.</p>
+                    <small className="muted">Established in 1999.</small>
+                    </div>
+                  </Reveal>
               </div>
 
             </div>
@@ -37,13 +40,16 @@ export default function AboutPage() {
           <section id="loan-features" className="section accentBackground">
                       <div className="container contentPad">
                           <div className="centeredContent">
-                              <h2>Meet the Team</h2>
-                              <p>Our team is made up of experienced professionals dedicated to providing clear guidance and responsive support throughout your homeownership journey.</p>
+                            <Reveal>
+                                <h2>Meet the Team</h2>
+                                <p>Our team is made up of experienced professionals dedicated to providing clear guidance and responsive support throughout your homeownership journey.</p>
+                            </Reveal>
                           </div>
                           <div className="contentGridThreeColumn">
                             {
                                 team.map((member) => {
                                     return (
+                                        <Reveal key={member.license}>
                                         <div key={member.license} className={`gridItemCenterAligned ${styles.memberGridItem}`} >
                                             <Image className="gridItemImage" height={72} width={72} alt={`Photo of ${member.name}`} src={member.photo}/>
                                             <h3>{member.name}</h3>
@@ -60,6 +66,7 @@ export default function AboutPage() {
                                                 </div>
                                             </div>
                                         </div>
+                                    </Reveal>
                                     )
                                 })
                             }
@@ -67,7 +74,9 @@ export default function AboutPage() {
                       </div>
                     </section>
                 <section className="externalLinks">
-                        <p className="brand bold">We believe clear communication and thoughtful guidance make a meaningful difference throughout the homeownership process.</p>
+                        <Reveal>
+                            <p className="brand bold">We believe clear communication and thoughtful guidance make a meaningful difference throughout the homeownership process.</p>
+                        </Reveal>
                 </section>
         </div>
     )

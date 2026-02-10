@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import eoh from "../../../public/eoh_white.svg"
 import styles from "./Footer.module.css";
 import logo from "../../../public/logo-white.svg";
 import { TbBrandFacebook, TbBrandX, TbBrandYoutube, TbBrandPinterest, TbBrandInstagram, TbPhone, TbAt } from "react-icons/tb";
@@ -36,31 +37,41 @@ export function Footer() {
                             <li className={styles.footerSocial}><Link target="_blank" rel="noreferrer" href="https://www.instagram.com/homesbyalicia0?igshid=xw8e6senuoy"><TbBrandInstagram /></Link></li>
                         </ul>
                     </div>
-                    <div className={styles.footerTopRight}>
-                        <ul className={styles.footerLinkList}>
-                            <li className={styles.footerLinkListTitle}>Services</li>
-                            <li className={styles.footerLinkListLink}><Link href="/services/credit-readiness">Credit Readiness Services</Link></li>
-                            <li className={styles.footerLinkListLink}><Link href="/services/down-payment-assistance">Down Payment Assistance</Link></li>
-                            <li className={styles.footerLinkListLink}><Link href="/services/rent-to-own-services">Rent to Own Services</Link></li>
-                            <li className={styles.footerLinkListLink}><Link href="/services/affordable-loan-solutions">Affordable Loan Solutions</Link></li>
-                        </ul>
-                        <ul className={styles.footerLinkList}>
-                            <li className={styles.footerLinkListTitle}>Resources</li>
-                            <li className={styles.footerLinkListLink}><Link href="/first-time-homebuyer-tips">First Time Homebuyer Tips</Link></li>
-                        </ul>
-                        <ul className={styles.footerLinkList}>
-                            <li className={styles.footerLinkListTitle}>Contact</li>
-                            <li className={styles.footerLinkListLink}><Link href="/about">About</Link></li>
-                            <li className={styles.footerLinkListLink}><Link href="/contact">Contact</Link></li>
-                        </ul>
+                    <div className={styles.footerRight}>
+                        <div className={styles.footerTopRight}>
+                            <ul className={styles.footerLinkList}>
+                                <li className={styles.footerLinkListTitle}>Services</li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/credit-readiness">Credit Readiness Services</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/down-payment-assistance">Down Payment Assistance</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/rent-to-own-services">Rent to Own Services</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/affordable-loan-solutions">Affordable Loan Solutions</Link></li>
+                            </ul>
+                            <ul className={styles.footerLinkList}>
+                                <li className={styles.footerLinkListTitle}>Resources</li>
+                                <li className={styles.footerLinkListLink}><Link href="/first-time-homebuyer-tips">First Time Homebuyer Tips</Link></li>
+                            </ul>
+                            <ul className={styles.footerLinkList}>
+                                <li className={styles.footerLinkListTitle}>Contact</li>
+                                <li className={styles.footerLinkListLink}><Link href="/about">About</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/contact">Contact</Link></li>
+                            </ul>
+                        </div>
+                        <div className={styles.texasNotices}>
+                            <Image src={eoh} height={96} width={96} alt="equal opportunity housing logo" />
+                            <ul className={styles.texasNoticesList}>
+                                <li><Link className={styles.footerLink} target="_blank" rel="noopener noreferrer" href="/legal/ConsumerProtectionNotice.pdf">Texas Consumer Protection Notice</Link></li>
+                                <li><Link className={styles.footerLink} target="_blank" rel="noopener noreferrer" href="/legal/TRECIABS.pdf">TREC Information About Brokerage Services</Link></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.footerBottom}>
                     <p className={styles.footerCopyright}>© {year} Alicia Carter Realty, All Rights Reserved</p>
                     <ul className={styles.footerBottomNav}>
-                        <li><Link className={styles.footerLink} href="#">Privacy Policy</Link></li>
-                        <li><Link className={styles.footerLink} href="#">Terms of Service</Link></li>
-                        <li><Link className={styles.footerLink} href="#">Cookie Settings</Link></li>
+
+                        <li><Link className={styles.footerLink} href="/privacy-policy">Privacy Policy</Link></li>
+                        <li><Link className={styles.footerLink} href="/terms-of-service">Terms of Service</Link></li>
+                        <li><Link className={styles.footerLink} href="/site-map">Sitemap</Link></li>
                         <li><Link className={styles.footerLink} href="https://www.vecteezy.com/free-vector/background">Background Vectors by Vecteezy</Link></li>
                     </ul>
                 </div>
