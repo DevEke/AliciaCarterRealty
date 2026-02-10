@@ -1,0 +1,42 @@
+[
+    {
+        "photo": "/",
+        "name": "Alicia Carter",
+        "title": "Broker/Owner",
+        "license": "#466822",
+        "email": "info@aliciacarterrealty.com",
+        "phone": "(972) 230-2100"
+    },
+    {
+        "photo": "/",
+        "name": "Travis Beasley",
+        "title": "Agent",
+        "license": "#429919",
+        "email": "travisbeasley85@yahoo.com",
+        "phone": "(972) 213-9274"
+    },
+    {
+        "photo": "/",
+        "name": "Kianna Thompson",
+        "title": "Agent",
+        "license": "#728553",
+        "email": "kiannadfwrealtor@gmail.com",
+        "phone": "(972) 800-0734"
+    },
+    {
+        "photo": "/",
+        "name": "Kurt Lawrence",
+        "title": "Agent",
+        "license": "#542632",
+        "email": "klawrence2010.kl@gmail.com",
+        "phone": "(817) 988-8145"
+    },
+    {
+        "photo": "/",
+        "name": "Ryan Sanford",
+        "title": "Agent",
+        "license": "#685838",
+        "email": "realtorryan99@gmail.com",
+        "phone": "(972) 814-4698"
+    }
+]

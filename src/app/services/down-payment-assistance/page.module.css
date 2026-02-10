@@ -1,0 +1,91 @@
+
+.programsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--s-7) var(--s-10);
+    gap: var(--s-10);
+    h3 {
+        margin-bottom: var(--s-6);
+        color: var(--brand);
+        text-align: center;
+    }
+}
+
+.programsGridItem {
+    border: 1px solid var(--sub-brand);
+    margin-bottom: var(--s-4);
+    padding: var(--s-6);
+    border-radius: var(--r-3);
+    h4 {
+        font-size: 21px;
+        margin-bottom: var(--s-2);
+    }
+    p {
+        margin: 0;
+    }
+    .fauxLink {
+        color: var(--brand);
+        font-weight: 600;
+        font-size: var(--s-5);
+        margin-top: var(--s-5)
+    }
+}
+
+.programsGridItem:hover {
+    background: var(--bg);
+  }
+
+  .containerLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .containerLink:hover,
+  .containerLink:focus-visible {
+    text-decoration: none;
+    .resourceGridItem {
+        background: var(--bg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .introductionContent {
+        width: 100%;
+    }
+
+    .typesContent {
+        width: 100%;
+    }
+
+    .typesGrid {
+        grid-template-columns: 1fr;
+        padding: var(--s-6);
+        gap: var(--s-7);
+    }
+
+    .typesGridItem {
+        text-align: center;
+        padding-inline: var(--s-4);
+    }
+
+    .eligibilityContent {
+        width: 100%;
+        text-align: center;
+    }
+
+    .programsContent {
+        width: 100%;
+    }
+
+    .programsGrid {
+        grid-template-columns: 1fr;
+        padding: var(--s-7) var(--s-3);
+        gap: var(--s-6);
+    }
+
+    .programsGridItem {
+        margin-bottom: var(--s-7);
+        background: var(--bg);
+    }
+  }

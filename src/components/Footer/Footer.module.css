@@ -1,0 +1,156 @@
+.footer {
+    background: var(--brand);
+    color: var(--bg);
+    padding: var(--s-9);
+}
+
+.footerInner {
+
+  }
+
+
+  .footerTop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: var(--s-6);
+    border-bottom: 1px solid var(--accent);
+    gap: var(--s-9);
+  }
+
+  .footerTopLeft {
+    width: 400px;
+  }
+  .footerLogo {
+    display: block;
+  }
+
+  .footerContact {
+    margin-block: var(--s-6) var(--s-7);
+    font-size: var(--s-5);
+  }
+
+  .footerSummary,
+  .footerServing {
+    font-size: var(--s-5);
+  }
+
+  .footerContactLinks {
+    margin-block: var(--s-6);
+    list-style-type: none;
+  }
+
+  .footerContactLink {
+    margin-block: var(--s-3);
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+  }
+
+  .footerSocials {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: var(--s-6);
+  }
+
+  .footerSocial {
+    font-size: var(--s-6);
+  }
+
+  .footerLinkList {
+    list-style-type: none;
+    padding: 0 var(--s-9) 0 0;
+    padding-right: var(--s-7);
+  }
+
+  .footerLinkListTitle {
+    font-weight: 700;
+    margin-bottom: var(--s-5);
+    font-size: var(--s-5);
+  }
+
+  .footerLinkListLink {
+    margin-bottom: var(--s-5);
+    color: var(--sub-brand);
+  }
+
+  .footerTopRight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-6);
+  }
+
+  .footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--s-7);
+  }
+
+  .footerCopyright {
+    font-size: var(--s-5);
+  }
+
+  .footerBottomNav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: var(--s-6);
+  }
+
+  .footerLink {
+    font-family: var(--font-outfit);
+    font-size: var(--s-5);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+        padding: var(--s-9) var(--s-6);
+    }
+    .footerTop {
+      flex-direction: column;
+      text-align: center;
+      gap: unset;
+    }
+
+    .footerLogo {
+        margin: 0 auto;
+    }
+
+    .footerTopLeft {
+        width: 100%;
+      }
+
+    .footerContactLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerSocials {
+        gap: unset;
+        justify-content: space-between;
+    }
+
+    .footerLinkList {
+        padding: 0;
+    }
+
+    .footerTopRight {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding-block: var(--s-7);
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footerBottomNav {
+        flex-direction: column;
+        padding-block: var(--s-7);
+    }
+  }

@@ -1,0 +1,38 @@
+
+
+.solutionContentRight {
+    padding-block: var(--s-7);
+    h3 {
+        margin-bottom: var(--s-5);
+        color: var(--brand);
+    }
+    ul {
+        margin-left: var(--s-7);
+        font-size: 18px;
+    }
+
+    ul li {
+        margin-block: var(--s-3);
+    }
+}
+
+@media (max-width: 768px) {
+    .solutionContentLeft {
+        text-align: center;
+    }
+
+    .solutionContentRight {
+        text-align: center;
+
+        ul {
+            text-align: left;
+            margin: 0;
+            padding-inline: var(--s-8);
+        }
+
+        ul li {
+            margin-block: var(--s-6);
+        }
+    }
+
+}

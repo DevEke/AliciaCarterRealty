@@ -1,0 +1,137 @@
+.header {
+    height: var(--header-height);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: transform 0.25s ease;
+    will-change: transform;
+  }
+
+  .headerHidden {
+    transform: translateY(-100%);
+  }
+
+  .inner {
+    height: var(--s-10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-4);
+  }
+
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .contact {
+    background: var(--brand);
+    color: var(--bg);
+    padding: var(--s-3) var(--s-5);
+    border-radius: var(--r-2);
+    font-size: var(--s-5);
+    font-weight: 600;
+  }
+
+  .contact:hover {
+    text-decoration: none;
+    background: var(--brand-hover);
+  }
+
+  .link {
+    font-size: var(--s-5);
+    color: var(--text);
+  }
+
+  .link:hover {
+    color: var(--brand);
+    text-decoration: none;
+  }
+
+  .navDesktop {
+    display: flex;
+    align-items: center;
+    gap: var(--s-6);
+    flex-wrap: wrap;
+  }
+
+  .menuButton {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    color: var(--brand);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 998;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 180ms ease;
+    will-change: opacity;
+  }
+
+  .overlayOpen {
+    opacity: 1;
+  }
+
+  .navMobile {
+    position: fixed;
+    padding: var(--s-4);
+    border-left: 1px solid var(--border);
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    width: min(360px, 88vw);
+    z-index: 999;
+    -webkit-overflow-scrolling: touch;
+    background: var(--bg);
+    transform: translateX(24px);
+    opacity: 0;
+    transition: transform 220ms ease, opacity 180ms ease;
+    will-change: transform, opacity;
+    overflow-y: auto;
+  }
+
+  .navMobileOpen {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .mobileInner {
+    display: grid;
+    gap: var(--s-3);
+  }
+
+  .mobileLink {
+    display: block;
+    padding: var(--s-3) 0;
+    font-size: 18px;
+    font-family: var(--font-outfit);
+    color: var(--brand);
+  }
+
+  /* Responsive switch */
+  @media (max-width: 768px) {
+    .navDesktop {
+      display: none;
+    }
+
+    .menuButton {
+      display: inline-flex;
+    }
+  }

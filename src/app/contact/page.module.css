@@ -1,0 +1,97 @@
+.contact {
+    background: var(--accent);
+}
+
+.contactContent {
+    width: 70%;
+}
+
+.contactInner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.contactForm {
+    padding: var(--s-7);
+    background: var(--bg);
+}
+
+.formInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    margin-bottom: var(--s-6);
+}
+
+.formLabel {
+    display: none;
+}
+
+.formInput,
+.formSelect,
+.formTextArea
+ {
+    padding: var(--s-4);
+    border-radius: var(--r-3);
+    font-size: 18px;
+    border: 1px solid var(--border);
+    background: var(--accent);
+}
+
+.formTextArea {
+    resize: none;
+}
+
+.formError {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-size: var(--s-5);
+    color: var(--error);
+}
+
+.formButton {
+    width: 100%;
+    margin-top: var(--s-7);
+}
+
+.footNote {
+    color: var(--muted);
+    font-size: var(--s-5);
+    width: 70%;
+    text-align: center;
+    margin: var(--s-6) auto 0 auto;
+}
+
+.formSuccess {
+    background: var(--bg);
+    padding: var(--s-10);
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contactContent {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactInner {
+        grid-template-columns: 1fr;
+    }
+
+    .contactForm {
+        padding: var(--s-6);
+        margin-block: var(--s-7);
+    }
+
+    .formSuccess {
+        padding: var(--s-7);
+        margin-block: var(--s-7);
+        width: 100%;
+    }
+}
