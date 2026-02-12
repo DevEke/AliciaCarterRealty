@@ -23,6 +23,7 @@
     flex-direction: column;
     gap: var(--s-2);
     margin-bottom: var(--s-6);
+    position: relative;
 }
 
 .formLabel {
@@ -38,6 +39,20 @@
     font-size: 18px;
     border: 1px solid var(--border);
     background: var(--accent);
+    color: #333;
+}
+
+.formSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: var(--s-7);
+}
+
+.selectChevron {
+    position: absolute;
+    top: var(--s-5);
+    right: var(--s-4);
 }
 
 .formTextArea {

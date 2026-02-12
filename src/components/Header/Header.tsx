@@ -49,7 +49,7 @@ export function Header() {
         <header className={` ${styles.header} ${hidden ? styles.headerHidden : ""}`} role="banner">
             <div className={`container ${styles.inner}`}>
                 <Link href="/" className={styles.brand} onClick={onNavClick}>
-                    <Image width={191} height={34} src={logo} alt="alicia carter realty logo"/>
+                    <img width={191} height={34} src={logo.src} alt="alicia carter realty logo"/>
                 </Link>
 
                 {/* Desktop nav */}

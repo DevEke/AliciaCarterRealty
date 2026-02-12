@@ -14,7 +14,7 @@ export function Footer() {
             <div className={`container ${styles.footerInner}`}>
                 <div className={styles.footerTop}>
                     <div className={styles.footerTopLeft}>
-                        <Image className={styles.footerLogo} width={191} height={34} alt="alicia carter realty footer logo" src={logo} />
+                        <img className={styles.footerLogo} width={191} height={34} alt="alicia carter realty footer logo" src={logo.src} />
                         <div className={styles.footerContact}>
                         <p className={styles.footerSummary}>Alicia Carter Realty supports first-time homebuyers with education, credit readiness, and access to affordable homeownership solutions across Texas.</p>
                         <ul className={styles.footerContactLinks}>
@@ -40,11 +40,14 @@ export function Footer() {
                     <div className={styles.footerRight}>
                         <div className={styles.footerTopRight}>
                             <ul className={styles.footerLinkList}>
-                                <li className={styles.footerLinkListTitle}>Services</li>
+                                <li className={styles.footerLinkListTitle}>All Services</li>
                                 <li className={styles.footerLinkListLink}><Link href="/services/credit-readiness">Credit Readiness Services</Link></li>
                                 <li className={styles.footerLinkListLink}><Link href="/services/down-payment-assistance">Down Payment Assistance</Link></li>
                                 <li className={styles.footerLinkListLink}><Link href="/services/rent-to-own-services">Rent to Own Services</Link></li>
                                 <li className={styles.footerLinkListLink}><Link href="/services/affordable-loan-solutions">Affordable Loan Solutions</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/home-selling">Home Selling Services</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/foreclosure-assistance">Foreclosure Assistance</Link></li>
+                                <li className={styles.footerLinkListLink}><Link href="/services/notary-services">Notary Services</Link></li>
                             </ul>
                             <ul className={styles.footerLinkList}>
                                 <li className={styles.footerLinkListTitle}>Resources</li>

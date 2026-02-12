@@ -1,13 +1,16 @@
 "use client";
+import { navigate } from "next/dist/client/components/segment-cache/navigation";
 import { useRouter } from "next/navigation";
-import styles from "./../app/page.module.css";
+
 
 type CallToActionButtonProps = {
   label?: string;
+  reason?: string;
 };
 
 export function CallToActionButton({
   label = "Start Your Homebuyer Journey",
+  reason = ""
 }: CallToActionButtonProps) {
   const router = useRouter();
 
@@ -15,7 +18,7 @@ export function CallToActionButton({
     <button
       type="button"
       className="button splashButton"
-      onClick={() => router.push("/contact")}
+      onClick={reason ? () => router.push(`/contact?reason=${reason}`) : () => router.push(`/contact`)}
     >
       {label}
     </button>

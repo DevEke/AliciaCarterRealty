@@ -1,25 +1,31 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import image from "../../public/set1-02.svg";
+import image1 from "../../public/set1-02.svg";
+import image2 from "../../public/set2-04.svg";
 import { Reveal } from "@/components/Reveal/Reveal";
-import payment from '../../public/payment.svg';
-import credit from '../../public/credit.svg';
-import loans from '../../public/loans.svg';
+import Link from "next/link";
 import understand from '../../public/understand.svg';
-import prepare from '../../public/prepare.svg';
 import explore from '../../public/explore.svg';
 import forward from '../../public/forward.svg';
 import { CallToActionButton } from "../components/CallToActionButton";
 import ResponsiveImage from "@/components/ResponsiveImage";
 
 export const metadata: Metadata = {
-  title: "Alicia Carter Realty",
+  title: "Alicia Carter Realty | Real Estate Guidance in Dallas–Fort Worth & Houston",
   description:
-    "Guidance for first-time homebuyers in Texas—credit readiness, down payment assistance, affordable loan options, and rent-to-own education to help you move forward with clarity.",
+    "Real estate guidance for buyers and homeowners in Dallas–Fort Worth and Houston, Texas. Credit readiness, down payment assistance, home selling strategy, and foreclosure options support.",
+    keywords: [
+      "Dallas real estate",
+      "Fort Worth real estate",
+      "Houston real estate",
+      "home buying Texas",
+      "home selling Texas",
+    ],
   openGraph: {
-    title: "Alicia Carter Realty",
+    title:
+      "Alicia Carter Realty | Buy with Confidence. Sell with Strategy.",
     description:
-      "Guidance for first-time homebuyers in Texas—credit readiness, down payment assistance, affordable loan options, and rent-to-own education to help you move forward with clarity.",
+      "Structured real estate guidance for buyers and homeowners across the Dallas–Fort Worth and Houston areas. Preparation, pricing, and informed next steps.",
     type: "website",
   },
 };
@@ -31,9 +37,9 @@ export default function HomePage() {
         <div className="container heroContainer">
           <div className="heroContent contentPad">
             <Reveal>
-              <h1><span className="brand">Your First Home</span><br/> Doesn’t Have to Be Confusing</h1>
-              <p className="subHeading">Clear guidance and support for first-time buyers navigating the homeownership process with confidence.</p>
-              <CallToActionButton />
+              <h1><span className="brand">Buy with confidence.</span> Sell with strategy.</h1>
+              <p className="subHeading">We guide buyers and homeowners through preparation, pricing, negotiation, and next steps with steady, informed support at every stage of the real estate process.</p>
+              <CallToActionButton label="Schedule a Consultation"/>
             </Reveal>
           </div>
         </div>
@@ -42,13 +48,13 @@ export default function HomePage() {
         <div className="container containerFlex">
           <div className="flexContent">
             <Reveal>
-              <h2>Built with First-Time Buyers in Mind</h2>
-              <p>Buying your first home shouldn’t feel rushed or overwhelming. Our approach is centered on clear explanations, honest guidance, and support that moves at your pace, helping you understand your options and feel confident from early preparation through closing.</p>
+              <h2>A Thoughtful Approach to Real Estate</h2>
+              <p>Whether you are purchasing your first home, preparing to sell, or navigating a time-sensitive situation, our approach centers on clear explanations, informed guidance, and support that moves at your pace. The objective is confidence rooted in understanding, not pressure.</p>
             </Reveal>
           </div>
           <div className="flexImage">
             <Reveal>
-              <ResponsiveImage src={image} alt="test" />
+              <ResponsiveImage src={image1} alt="test" />
             </Reveal>
           </div>
         </div>
@@ -57,89 +63,68 @@ export default function HomePage() {
         <div className="container contentPad">
           <div className="centeredContent">
             <Reveal>
-              <h2>How We Support First-Time Buyers</h2>
+              <h2>Who We Serve</h2>
+              <p>Every real estate decision carries weight. Whether you are entering the market, preparing to sell, or navigating unexpected circumstances, our role is to provide structured guidance that supports informed and confident choices.</p>
             </Reveal>
           </div>
             <div className="contentGridThreeColumn">
               <Reveal>
                 <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="down payment assistance icon" src={payment}/>
-                  <h3>Down Payment Assistance</h3>
-                  <p>Exploring programs that make homeownership more accessible.</p>
+                  <img className="gridItemImage" height={72} width={72} alt="down payment assistance icon" src={explore.src}/>
+                  <h3>Home Buyers</h3>
+                  <p>We help first-time and returning buyers strengthen preparation, understand financing, and approach the market with confidence.</p>
+                  <Link className="link" href="/services#homebuyer-services">Explore Buyer Services</Link>
                 </div>
               </Reveal>
               <Reveal>
                 <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="credit readiness icon" src={credit}/>
-                  <h3>Credit Readiness</h3>
-                  <p>Helping buyers understand and improve credit before applying.</p>
+                  <img className="gridItemImage" height={72} width={72} alt="credit readiness icon" src={forward.src}/>
+                  <h3>Home Sellers</h3>
+                  <p>We guide homeowners through pricing strategy, property preparation, and negotiation from listing through closing.</p>
+                  <Link className="link" href="/services#homeowner-services">Explore Seller Services</Link>
                 </div>
               </Reveal>
               <Reveal>
                 <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="affordable loan options icon" src={loans}/>
-                  <h3>Affordable Loan Options</h3>
-                  <p>Identifying financing paths that fit your situation.</p>
+                  <img className="gridItemImage" height={72} width={72} alt="affordable loan options icon" src={understand.src}/>
+                  <h3>Home Owners Seeking Options</h3>
+                  <p>For those facing financial pressure or uncertainty, we provide clear information and structured next steps.</p>
+                  <Link className="link" href="/services/foreclosure-assistance">Explore Foreclosure Assistance</Link>
                 </div>
               </Reveal>
             </div>
         </div>
       </section>
       <section className="section accentBackground">
-        <div className="container contentPad">
-          <div className="centeredContent">
+        <div className="container containerFlex flexReverse">
+          <div className="flexImage">
             <Reveal>
-              <h2>What the Homebuying Process Looks Like</h2>
+              <ResponsiveImage src={image2} alt="test" />
             </Reveal>
           </div>
-          <div className="contentGridFourColumn">
-              <Reveal>
-                <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="understand your starting point icon" src={understand}/>
-                  <h3>1. Understand your starting point</h3>
-                  <p>Get clarity on your financial picture and homeownership goals.</p>
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="prepare with confidence icon" src={prepare}/>
-                  <h3>2. Prepare with confidence</h3>
-                  <p>Review credit, financing options, and assistance programs that may apply to you.</p>
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="explore homes intentionally icon" src={explore}/>
-                  <h3>3. Explore homes intentionally</h3>
-                  <p>Search with realistic expectations and without pressure to rush.</p>
-                </div>
-              </Reveal>
-              <Reveal>
-                <div className="gridItemCenterAligned">
-                  <Image className="gridItemImage" height={72} width={72} alt="move forward when you’re ready icon" src={forward}/>
-                  <h3>4. Move forward when you’re ready</h3>
-                  <p>Take the next steps only when it feels right for you.</p>
-                </div>
-              </Reveal>
-            </div>
+          <div className="flexContent">
+            <Reveal>
+              <h2>A Structured Way Forward</h2>
+              <p>Every transaction carries financial and personal weight. Our approach centers on preparation, thoughtful strategy, and clear communication so you understand each decision before it is made. The result is movement with intention rather than urgency.</p>
+            </Reveal>
+          </div>
         </div>
       </section>
       <section className="section actionBackground">
-            <Reveal>
-        <div className="container containerFlex contentPad actionFlex">
-          <div className="halfContent">
-            <h2>When You’re Ready, We’re Here</h2>
-            <p>Get clear guidance and support without pressure or rushed decisions.</p>
-          </div>
-
+        <Reveal>
+          <div className="container containerFlex contentPad actionFlex">
+            <div className="halfContent">
+              <h2>When You’re Ready, We’re Here</h2>
+              <p>Every situation is different. A brief consultation can help clarify direction and outline a path forward.</p>
+            </div>
             <CallToActionButton />
-        </div>
-          </Reveal>
+          </div>
+        </Reveal>
       </section>
       <section className="section">
         <div className="container">
           <div className="centeredContent contentPad">
-            <p className="muted">Alicia Carter Realty works with first-time homebuyers seeking clear guidance through the homeownership process. With a focus on education, credit readiness, and accessible financing options, we support buyers as they prepare, explore, and move forward with confidence. Services are available to clients across Texas, including the Dallas–Fort Worth and Houston areas.</p>
+            <p className="muted">Alicia Carter Realty supports buyers and homeowners across Texas, including the Dallas–Fort Worth and Houston areas. With a focus on education, credit readiness, financing clarity, and structured guidance, we work with first-time buyers, returning buyers, and homeowners preparing to sell or evaluate their options.</p>
           </div>
         </div>
       </section>

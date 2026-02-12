@@ -10,14 +10,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/first-time-homebuyer-tips", changeFrequency: "monthly", priority: 0.8 },
     { path: "/about", changeFrequency: "yearly", priority: 0.6 },
     { path: "/contact", changeFrequency: "yearly", priority: 0.6 },
+    { path: "/privacy-policy", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/terms-of-service", changeFrequency: "yearly", priority: 0.3 }
   ];
 
   // Service detail pages (explicit list; avoids accidentally including removed services)
   const serviceRoutes = [
     "/services/credit-readiness",
     "/services/down-payment-assistance",
-    "/services/affordable-loan-options",
-    "/services/rent-to-own",
+    "/services/affordable-loan-solutions",
+    "/services/rent-to-own-services",
+    "/services/home-selling",
+    "/services/foreclosure-assistance",
+    "/services/notary-services"
   ] as const;
 
   const now = new Date();

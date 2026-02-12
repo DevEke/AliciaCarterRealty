@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import sold from "../../../public/sold.svg";
 import { useForm } from "react-hook-form";
@@ -8,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import type { ContactFormValues } from "@/lib/contactSchema";
 import { contactSchema } from "@/lib/contactSchema";
 import Link from "next/link";
-import { TbAlertCircle } from "react-icons/tb";
+import { TbAlertCircle, TbChevronDown } from "react-icons/tb";
 import styles from "./page.module.css";
 
 type SubmitState =
@@ -16,15 +17,26 @@ type SubmitState =
   | { status: "success" }
   | { status: "error"; message: string };
 
-
+const allowedReasons = new Set([
+  "credit-readiness",
+  "down-payment-assistance",
+  "affordable-loan-solutions",
+  "rent-to-own-services",
+  "home-selling",
+  "foreclosure-assistance",
+  "notary-services",
+]);
 
 export function ContactForm() {
   const [submitState, setSubmitState] = useState<SubmitState>({ status: "idle" });
   const isSuccess = submitState.status === "success";
+  const searchParams = useSearchParams();
+  const reasonParam = searchParams.get("reason");
 
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors, isSubmitting },
     reset,
     setFocus,
@@ -83,6 +95,13 @@ export function ContactForm() {
       });
     }
   }
+
+  useEffect(() => {
+    if (!reasonParam) return;
+    if (!allowedReasons.has(reasonParam)) return;
+
+    setValue("reason", reasonParam, { shouldValidate: true, shouldDirty: true });
+  }, [reasonParam, setValue]);
 
 
   if (isSuccess) {
@@ -177,17 +196,19 @@ export function ContactForm() {
             <label htmlFor="reason" className={styles.formLabel}>Reason</label>
             <select className={styles.formSelect} id="reason" {...register("reason")}>
                 <option value="">What are you looking for?</option>
-                <option value="first_time_buyer">First time buyer</option>
-                <option value="buying_a_home">Buying a home</option>
-                <option value="selling_a_home">Selling a home</option>
-                <option value="affordable_loans">Community Affordable Loans</option>
-                <option value="rent_to_own">Rent to own services</option>
-                <option value="down_payment_assistance">Down payment assistance</option>
-                <option value="notary_services">Notary services</option>
-                <option value="credit_repair">Credit repair services</option>
-                <option value="just_browsing">Just browsing</option>
+                <option value="first-time-buyer">First time buyer</option>
+                <option value="home-buying">Buying a home</option>
+                <option value="home-selling">Selling a home</option>
+                <option value="credit-readiness">Credit Readiness</option>
+                <option value="affordable-loan-solutions">Community Affordable Loans</option>
+                <option value="rent-to-own-services">Rent to own services</option>
+                <option value="down-payment-assistance">Down payment assistance</option>
+                <option value="notary-services">Notary services</option>
+                <option value="foreclosure-assistance">Foreclosure assistance</option>
+                <option value="just-browsing">Just browsing</option>
                 <option value="other">Other</option>
             </select>
+            <TbChevronDown className={styles.selectChevron} />
             {errors.reason?.message && (
               <div role="alert" className={styles.formError}>
                 <TbAlertCircle className={styles.formErrorIcon} />

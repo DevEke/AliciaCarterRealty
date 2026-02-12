@@ -149,7 +149,7 @@ main {
 
 .accentBackground {
   background: var(--accent);
-  h2 {
+  h2, h3 {
     color: var(--brand)
   }
 }
@@ -229,16 +229,6 @@ main {
   h2 {
     font-size: var(--s-6);
   }
-
-  .basicList {
-    margin-left: var(--s-7);
-    padding-block: var(--s-2);
-    font-size: 18px;
-
-    li {
-      margin-block: var(--s-2);
-    }
-  }
 }
 
 .bold {
@@ -247,6 +237,19 @@ main {
 
 .spacer {
   margin-top: var(--s-7)
+}
+
+.spacer-down {
+  margin-bottom: var(--s-7)
+}
+
+.basicList {
+    margin-left: var(--s-7);
+    font-size: 18px;
+
+    li {
+      margin-block: var(--s-3);
+    }
 }
 
 .subAccentBackground {
@@ -437,7 +440,9 @@ section[id] {
   }
 
 
-
+  .basicList {
+    text-align: left;
+  }
 
   .subHeading {
     font-size: 18px;

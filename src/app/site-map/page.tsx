@@ -33,12 +33,25 @@ export default function SitemapPage() {
                         </ul>
                     </div>
                     <div className="privacyContainer">
-                        <h2>Services</h2>
+                        <h2>Homebuyer Services</h2>
                         <ul className="basicList">
                             <li><Link href="/services/credit-readiness">Credit Readiness</Link></li>
                             <li><Link href="/services/down-payment-assistance">Down Payment Assistance</Link></li>
                             <li><Link href="/services/affordable-loan-solutions">Affordable Loan Solutions</Link></li>
                             <li><Link href="/services/rent-to-own-services">Rent-to-Own Services</Link></li>
+                        </ul>
+                    </div>
+                    <div className="privacyContainer">
+                        <h2>Homeowner Services</h2>
+                        <ul className="basicList">
+                            <li><Link href="/services/home-selling">Home Selling Services</Link></li>
+                            <li><Link href="/services/foreclosure-assistance">Foreclosure Assistance</Link></li>
+                        </ul>
+                    </div>
+                    <div className="privacyContainer">
+                        <h2>Additional Services</h2>
+                        <ul className="basicList">
+                            <li><Link href="/services/notary-services">Notary Services</Link></li>
                         </ul>
                     </div>
                     <div className="privacyContainer">

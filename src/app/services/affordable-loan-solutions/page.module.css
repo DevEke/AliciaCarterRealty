@@ -6,14 +6,6 @@
         margin-bottom: var(--s-5);
         color: var(--brand);
     }
-    ul {
-        margin-left: var(--s-7);
-        font-size: 18px;
-    }
-
-    ul li {
-        margin-block: var(--s-3);
-    }
 }
 
 @media (max-width: 768px) {

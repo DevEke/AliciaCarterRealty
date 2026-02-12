@@ -76,10 +76,10 @@ export default function FirstTimeHomebuyerTipsPage() {
             </div>
         </section>
         <section className="externalLinks">
-                <Reveal>
-                    <p>Some first-time buyers also explore <Link className="inline-link" href="/services/down-payment-assistance">Down Payment Assistance</Link> programs as part of their planning.</p>
-                </Reveal>
-            </section>
+            <Reveal>
+                <p>Some first-time buyers also explore <Link className="inline-link" href="/services/down-payment-assistance">Down Payment Assistance</Link> programs as part of their planning.</p>
+            </Reveal>
+        </section>
         <section className="section accentBackground">
             <div className="container">
                 <div className="centeredContent contentPad">
@@ -89,25 +89,22 @@ export default function FirstTimeHomebuyerTipsPage() {
                     </Reveal>
                 </div>
             </div>
-
         </section>
         <section className="externalLinks ">
-                <Reveal>
-                    <p>Understanding the available <Link className="inline-link" href="/services/affordable-loan-options">Affordable Loan Solutions</Link> can also be part of early preparation.</p>
-                </Reveal>
-            </section>
+            <Reveal>
+                <p>Understanding the available <Link className="inline-link" href="/services/affordable-loan-options">Affordable Loan Solutions</Link> can also be part of early preparation.</p>
+            </Reveal>
+        </section>
         <section className="section actionBackground">
-                        <Reveal>
+            <Reveal>
                 <div className="container containerFlex contentPad actionFlex">
                     <div className="halfContent">
-                            <h2>When You’re Ready, We’re Here</h2>
-                            <p>If you have questions about preparing for your first home purchase or want help understanding your next steps, a conversation can help bring clarity.</p>
-
+                        <h2>When You’re Ready, We’re Here</h2>
+                        <p>If you have questions about preparing for your first home purchase or want help understanding your next steps, a conversation can help bring clarity.</p>
                     </div>
-
-                        <CallToActionButton />
+                    <CallToActionButton />
                 </div>
-                    </Reveal>
+            </Reveal>
         </section>
     </div>
     )
