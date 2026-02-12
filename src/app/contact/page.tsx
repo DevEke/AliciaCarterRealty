@@ -1,5 +1,5 @@
 
-
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { ContactForm } from "./ContactForm";
 import { Reveal } from "@/components/Reveal/Reveal";
@@ -22,9 +22,11 @@ export const metadata: Metadata = {
                 <p className="subHeading">Every first-time buyer’s situation is different. Use the form to tell us a bit about what you’re exploring, and we’ll follow up with information that’s relevant to your next step.</p>
               </Reveal>
             </div>
-            <Reveal>
-              <ContactForm />
-            </Reveal>
+            <Suspense fallback={null}>
+              <Reveal>
+                <ContactForm />
+              </Reveal>
+            </Suspense>
           </div>
         </section>
       </div>
