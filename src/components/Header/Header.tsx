@@ -8,13 +8,14 @@ import logo from "../../../public/logo-color.svg";
 import { TextAlignEnd, X } from "lucide-react";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { useHeaderControl } from "@/hooks/useHeaderControl";
+import { ServicesMenu } from "./ServicesMenu";
 
 const navigation = [
-    { href: "/", label: "Home"},
-    { href: "/services", label: "Services"},
-    { href: "/first-time-homebuyer-tips", label: "First Time Homebuyer Tips"},
-    { href: "/about", label: "About"},
-    { href: "/contact", label: "Contact"}
+    { href: "/", label: "Home", type: "link"},
+    { href: "/services", label: "Services", type: "drop-down"},
+    { href: "/first-time-homebuyer-tips", label: "First Time Homebuyer Tips", type: "link"},
+    { href: "/about", label: "About", type: "link"},
+    { href: "/contact", label: "Contact", type: "link"}
 ]
 
 export function Header() {
@@ -54,9 +55,11 @@ export function Header() {
 
                 {/* Desktop nav */}
                 <nav className={styles.navDesktop} aria-label="Primary">
-                    {navigation.map((link) => (
+                    {navigation.map((link) =>
+                        link.type == "drop-down" ?
+                        <ServicesMenu  key={link.href} /> :
                         <Link key={link.href} href={link.href} className={link.href === "/contact" ?styles.contact : styles.link}>{link.label}</Link>
-                    ))}
+                    )}
                 </nav>
 
                 {/* Mobile button */}
