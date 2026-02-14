@@ -124,7 +124,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <div className="centeredContent contentPad">
-            <p className="muted">Alicia Carter Realty supports buyers and homeowners across Texas, including the Dallas–Fort Worth and Houston areas. With a focus on education, credit readiness, financing clarity, and structured guidance, we work with first-time buyers, returning buyers, and homeowners preparing to sell or evaluate their options.</p>
+            <p>Alicia Carter Realty supports buyers and homeowners across Texas, including the Dallas–Fort Worth and Houston areas. With a focus on education, credit readiness, financing clarity, and structured guidance, we work with first-time buyers, returning buyers, and homeowners preparing to sell or evaluate their options.</p>
           </div>
         </div>
       </section>

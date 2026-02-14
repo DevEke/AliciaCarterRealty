@@ -30,11 +30,11 @@ export function Footer() {
                         <p className={styles.footerServing}>Serving the Dallas-Fort Worth and Houston, Texas Areas</p>
                         </div>
                         <ul className={styles.footerSocials}>
-                            <li className={styles.footerSocial}><Link target="_blank" rel="noreferrer" href="https://www.facebook.com/aliciacarterrealty"><TbBrandFacebook /></Link></li>
-                            <li className={styles.footerSocial}><Link target="_blank" rel="noreferrer" href="https://www.twitter.com/homesbyalicia"><TbBrandX /></Link></li>
-                            <li className={styles.footerSocial}><Link target="_blank" rel="noreferrer" href="https://www.youtube.com/acrealtyandcreditservices"><TbBrandYoutube /></Link></li>
-                            <li className={styles.footerSocial}><Link target="_blank" rel="noreferrer" href="https://www.pinterest.com/aliciacarterrealty"><TbBrandPinterest /></Link></li>
-                            <li className={styles.footerSocial}><Link target="_blank" rel="noreferrer" href="https://www.instagram.com/homesbyalicia0?igshid=xw8e6senuoy"><TbBrandInstagram /></Link></li>
+                            <li className={styles.footerSocial}><Link aria-label="Visit our Facebook page" target="_blank" rel="noreferrer" href="https://www.facebook.com/aliciacarterrealty"><TbBrandFacebook aria-hidden="true" /></Link></li>
+                            <li className={styles.footerSocial}><Link aria-label="Visit our Twitter/X page" target="_blank" rel="noreferrer" href="https://www.twitter.com/homesbyalicia"><TbBrandX aria-hidden="true" /></Link></li>
+                            <li className={styles.footerSocial}><Link aria-label="Visit our Youtube page" target="_blank" rel="noreferrer" href="https://www.youtube.com/acrealtyandcreditservices"><TbBrandYoutube aria-hidden="true" /></Link></li>
+                            <li className={styles.footerSocial}><Link aria-label="Visit our Pinterest page" target="_blank" rel="noreferrer" href="https://www.pinterest.com/aliciacarterrealty"><TbBrandPinterest aria-hidden="true" /></Link></li>
+                            <li className={styles.footerSocial}><Link aria-label="Visit our Instagram page" target="_blank" rel="noreferrer" href="https://www.instagram.com/homesbyalicia0?igshid=xw8e6senuoy"><TbBrandInstagram aria-hidden="true" /></Link></li>
                         </ul>
                     </div>
                     <div className={styles.footerRight}>
