@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import image1 from "../../public/set1-02.svg";
 import image2 from "../../public/set2-04.svg";
 import { Reveal } from "@/components/Reveal/Reveal";

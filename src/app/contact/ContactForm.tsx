@@ -18,13 +18,17 @@ type SubmitState =
   | { status: "error"; message: string };
 
 const allowedReasons = new Set([
-  "credit-readiness",
-  "down-payment-assistance",
-  "affordable-loan-solutions",
-  "rent-to-own-services",
-  "home-selling",
+  "credit_readiness",
+  "down_payment_assistance",
+  "affordable_loan_solutions",
+  "rent_to_own_services",
+  "selling_a_home",
+  "buying_a_home",
   "foreclosure-assistance",
-  "notary-services",
+  "notary_services",
+  "just_browsing",
+  "first_time_buyer",
+  "other"
 ]);
 
 export function ContactForm() {
@@ -196,16 +200,16 @@ export function ContactForm() {
             <label htmlFor="reason" className={styles.formLabel}>Reason</label>
             <select className={styles.formSelect} id="reason" {...register("reason")}>
                 <option value="">What are you looking for?</option>
-                <option value="first-time-buyer">First time buyer</option>
-                <option value="home-buying">Buying a home</option>
-                <option value="home-selling">Selling a home</option>
-                <option value="credit-readiness">Credit Readiness</option>
-                <option value="affordable-loan-solutions">Community Affordable Loans</option>
-                <option value="rent-to-own-services">Rent to own services</option>
-                <option value="down-payment-assistance">Down payment assistance</option>
-                <option value="notary-services">Notary services</option>
-                <option value="foreclosure-assistance">Foreclosure assistance</option>
-                <option value="just-browsing">Just browsing</option>
+                <option value="first_time_buyer">First Time Buyer</option>
+                <option value="buying_a_home">Buying a Home</option>
+                <option value="selling_a_home">Selling a Home</option>
+                <option value="credit_readiness">Credit Readiness</option>
+                <option value="affordable_loan_solutions">Community Affordable Loans</option>
+                <option value="rent_to_own_services">Rent-To-Own Services</option>
+                <option value="down_payment_assistance">Down Payment Assistance</option>
+                <option value="notary_services">Notary Services</option>
+                <option value="foreclosure_assistance">Foreclosure Assistance</option>
+                <option value="just_browsing">Just Browsing</option>
                 <option value="other">Other</option>
             </select>
             <TbChevronDown className={styles.selectChevron} />

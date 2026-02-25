@@ -20,15 +20,16 @@ function escapeHtml(input: string) {
 
 function formatReason(reason: string) {
   const map: Record<string, string> = {
-    first_time_buyer: "First time buyer",
-    buying_a_home: "Buying a home",
-    selling_a_home: "Selling a home",
-    affordable_loans: "Community Affordable Loans",
-    rent_to_own: "Rent to own",
-    down_payment_assistance: "Down payment assistance",
-    notary_services: "Notary services",
-    credit_repair: "Credit repair",
-    just_browsing: "Just browsing",
+    first_time_buyer: "First Time Buyer",
+    buying_a_home: "Buying a Home",
+    selling_a_home: "Selling a Home",
+    affordable_loan_solutions: "Community Affordable Loans",
+    rent_to_own_services: "Rent-To-Own Services",
+    down_payment_assistance: "Down Payment Assistance",
+    notary_services: "Notary Services",
+    credit_readiness: "Credit Readiness",
+    foreclosure_assistance: "Foreclosure Assistance",
+    just_browsing: "Just Browsing",
     other: "Other",
   };
   return map[reason] ?? reason;
