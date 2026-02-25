@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
-import logo from "../../../public/logo-color.svg";
+import logo from "../../../public/ACR_ExtraLong_Color.svg";
 import { TextAlignEnd, X } from "lucide-react";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { useHeaderControl } from "@/hooks/useHeaderControl";
@@ -50,7 +49,7 @@ export function Header() {
         <header className={` ${styles.header} ${hidden ? styles.headerHidden : ""}`} role="banner">
             <div className={`container ${styles.inner}`}>
                 <Link href="/" className={styles.brand} onClick={onNavClick}>
-                    <img width={191} height={34} src={logo.src} alt="alicia carter realty logo"/>
+                    <img src={logo.src} className={styles.headerLogo} alt="alicia carter realty logo"/>
                 </Link>
 
                 {/* Desktop nav */}

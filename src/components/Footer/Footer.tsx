@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import eoh from "../../../public/eoh_white.svg"
 import styles from "./Footer.module.css";
-import logo from "../../../public/logo-white.svg";
+import logo from "../../../public/ACR_ExtraLong_White.svg";
 import { TbBrandFacebook, TbBrandX, TbBrandYoutube, TbBrandPinterest, TbBrandInstagram, TbPhone, TbAt } from "react-icons/tb";
 
 export function Footer() {
@@ -14,7 +14,7 @@ export function Footer() {
             <div className={`container ${styles.footerInner}`}>
                 <div className={styles.footerTop}>
                     <div className={styles.footerTopLeft}>
-                        <img className={styles.footerLogo} width={191} height={34} alt="alicia carter realty footer logo" src={logo.src} />
+                        <img className={styles.footerLogo} alt="alicia carter realty footer logo" src={logo.src} />
                         <div className={styles.footerContact}>
                         <p className={styles.footerSummary}>Alicia Carter Realty supports first-time homebuyers with education, credit readiness, and access to affordable homeownership solutions across Texas.</p>
                         <ul className={styles.footerContactLinks}>

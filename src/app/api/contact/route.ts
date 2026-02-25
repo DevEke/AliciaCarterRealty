@@ -5,13 +5,6 @@ import { contactSchema } from "@/lib/contactSchema";
 
 export const runtime = "nodejs";
 
-/**
- * Your shared schema (contactSchema) currently validates:
- * name, email, message, phone?, intent?, company?
- *
- * Your route also expects `reason`, so we extend the schema here
- * without changing your shared schema file.
- */
 const serverSchema = contactSchema.extend({
   reason: z.string().trim().min(1, "Reason is required."),
 });
@@ -41,10 +34,6 @@ function formatReason(reason: string) {
   return map[reason] ?? reason;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Templates (UNCHANGED)                                                      */
-/* -------------------------------------------------------------------------- */
-
 function ownerEmailHtml(args: {
   brand: string;
   siteUrl: string;
@@ -73,6 +62,7 @@ function ownerEmailHtml(args: {
         </tr>
         <tr>
           <td colspan="3" style="padding: 24px 24px 0 24px;">
+          <img height="30" width="" style="display: block;  margin: 24px auto 24px 0;" alt="alicia_carter_realty_logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771979553/ACR_ExtraLong_Color_wjkkgm.svg">
             <h1 style="font-size: 24px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; margin: 24px 0 36px 0; line-height: 30px;">New Website Lead</h1>
             <p style="font-size: 15px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; line-height: 24px;"><strong>Name:</strong> ${name}</p>
             <p style="font-size: 15px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; line-height: 24px;"><strong>Email:</strong> ${email}</p>
@@ -89,37 +79,37 @@ function ownerEmailHtml(args: {
         </tr>
         <tr>
           <td colspan="3" style="padding:24px; text-align: center; background: #00549E;">
+          <img height="36" width="" style="display: block; margin: 24px auto 12px auto;" alt="alicia_carter_realty_logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771979774/ACR_Simple_White_fnkmsz.svg">
             <p style="margin: 24px 0 0 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: white;">© ${brand}</p>
             <p style="margin: 6px 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: white;">Alicia Carter, Licensed by Texas Real Estate Commission</p>
             <p style="margin: 6px 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: white;">(972) 230-2100</p>
             <ul style="list-style-type: none; display: inline-block; margin: 24px 0; padding: 0;">
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.facebook.com/aliciacarterrealty">
-                  <img height="32" width="32" alt="facebook-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/facebook-white_dwruqm.svg">
+                  <img height="24" width="24" alt="facebook-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980455/facebook_white_tcwqyl.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.twitter.com/homesbyalicia">
-                  <img height="32" width="32" alt="x-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/x-white_rsrhat.svg">
+                  <img height="24" width="24" alt="x-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980457/x_white_u0dve7.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.youtube.com/acrealtyandcreditservices">
-                  <img height="32" width="32" alt="youtube-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/youtube-white_g5eupl.svg">
+                  <img height="24" width="24" alt="youtube-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980450/youtube_white_qgx9qe.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.pinterest.com/aliciacarterrealty">
-                  <img height="32" width="32" alt="pinterest-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/pinterest-white_qwaeui.svg">
+                  <img height="24" width="24" alt="pinterest-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980450/pinterest_white_e5m52b.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.instagram.com/homesbyalicia0?igshid=xw8e6senuoy">
-                  <img height="32" width="32" alt="instagram-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/instagram-white_x9pl38.svg">
+                  <img height="24" width="24" alt="instagram-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980453/instagram_white_juga3r.svg">
                 </a>
               </li>
             </ul>
-            <img height="25" width="" style="display: block; margin: 24px auto 12px auto;" alt="alicia_carter_realty_logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770325525/Alicia_Carter_Logo_-_white_kudine.svg">
           </td>
         </tr>
       </table>
@@ -145,6 +135,7 @@ function userConfirmHtml(args: { brand: string; name: string; siteUrl: string })
         </tr>
         <tr>
           <td colspan="3" style="padding:24px;">
+          <img height="30" width="" style="display: block; margin: 24px auto 24px 0;" alt="alicia_carter_realty_logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771979553/ACR_ExtraLong_Color_wjkkgm.svg">
             <h1 style="font-size: 30px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; margin: 48px 0; line-height: 36px;">You're one step closer.<br> <span style="color: #00549E;">Let's get you home.</span></h1>
             <p style="font-size: 15px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; line-height: 24px;">Hi ${name},</p>
             <p style="font-size: 15px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; line-height: 24px; padding-bottom: 48px;">Thanks for reaching out to ${brand}. You’re message is in good hands, and we’ll be in touch with you shortly. While you’re here, take a moment to explore our other services. We’re here to guide and support you through every step of the home-buying process.</p>
@@ -171,38 +162,39 @@ function userConfirmHtml(args: { brand: string; name: string; siteUrl: string })
         </tr>
         <tr>
           <td colspan="3" style="padding:24px; text-align: center; background: #00549E;">
+          <img height="36" width="" style="display: block; margin: 24px auto 12px auto;" alt="alicia_carter_realty_logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771979774/ACR_Simple_White_fnkmsz.svg">
             <p style="margin: 24px 0 0 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: white;">© ${brand}</p>
             <p style="margin: 6px 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: white;">Alicia Carter, Licensed by Texas Real Estate Commission</p>
             <p style="margin: 6px 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: white;">(972) 230-2100</p>
             <ul style="list-style-type: none; display: inline-block; margin: 24px 0; padding: 0;">
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.facebook.com/aliciacarterrealty">
-                  <img height="32" width="32" alt="facebook-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/facebook-white_dwruqm.svg">
+                  <img height="24" width="24" alt="facebook-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980455/facebook_white_tcwqyl.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.twitter.com/homesbyalicia">
-                  <img height="32" width="32" alt="x-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/x-white_rsrhat.svg">
+                  <img height="24" width="24" alt="x-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980457/x_white_u0dve7.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.youtube.com/acrealtyandcreditservices">
-                  <img height="32" width="32" alt="youtube-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/youtube-white_g5eupl.svg">
+                  <img height="24" width="24" alt="youtube-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980450/youtube_white_qgx9qe.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.pinterest.com/aliciacarterrealty">
-                  <img height="32" width="32" alt="pinterest-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/pinterest-white_qwaeui.svg">
+                  <img height="24" width="24" alt="pinterest-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980450/pinterest_white_e5m52b.svg">
                 </a>
               </li>
               <li style="display: inline-block; margin: 0 12px;">
                 <a target="_blank" href="https://www.instagram.com/homesbyalicia0?igshid=xw8e6senuoy">
-                  <img height="32" width="32" alt="instagram-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770319235/instagram-white_x9pl38.svg">
+                  <img height="24" width="24" alt="instagram-logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1771980453/instagram_white_juga3r.svg">
                 </a>
               </li>
             </ul>
             <p style="margin: 24px 0 0 0; font-size: 12px; font-family: 'Segoe UI', Arial, sans-serif; font-weight: 500; color: #F4FAFF;"><em>You are receiving this email because you submitted a request for information on our website. Your information will only be used to respond to your inquiry.</em></p>
-            <img height="25" width="" style="display: block; margin: 24px auto 12px auto;" alt="alicia_carter_realty_logo" src="https://res.cloudinary.com/deveke/image/upload/f_png/v1770325525/Alicia_Carter_Logo_-_white_kudine.svg">
+
           </td>
         </tr>
       </table>
@@ -281,9 +273,6 @@ function formatUserText(args: { name: string; brand: string; siteUrl: string }) 
   `;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Handler                                                                     */
-/* -------------------------------------------------------------------------- */
 
 export async function POST(req: Request) {
   try {
@@ -291,7 +280,6 @@ export async function POST(req: Request) {
     const parsed = serverSchema.safeParse(body);
 
     if (!parsed.success) {
-      // Field-level errors for the client (React Hook Form can use these if you choose)
       return NextResponse.json(
         {
           error: "Invalid form data.",
@@ -302,8 +290,6 @@ export async function POST(req: Request) {
     }
 
     const { name, email, phone, reason, message, company } = parsed.data;
-
-    // Honeypot: silently succeed
     if (company && company.trim().length > 0) {
       return NextResponse.json({ ok: true }, { status: 200 });
     }
@@ -318,7 +304,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // Support your current env var typo + the common correct one.
     const apiKey = process.env.RESENT_API_KEY || process.env.RESEND_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
@@ -361,7 +346,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from,
       to: email,
-      replyTo: to, // replies go back to the business inbox
+      replyTo: to,
       subject: `We received your message. — ${brand}`,
       html: userConfirmHtml({ brand, name, siteUrl }),
       text: formatUserText({

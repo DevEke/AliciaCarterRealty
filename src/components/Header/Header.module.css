@@ -24,6 +24,10 @@
     gap: var(--s-4);
   }
 
+  .headerLogo {
+    height: 30px;
+  }
+
   .brand {
     font-weight: 700;
     letter-spacing: 0.2px;

@@ -23,6 +23,7 @@
   }
   .footerLogo {
     display: block;
+    height: 30px;
   }
 
   .footerContact {
